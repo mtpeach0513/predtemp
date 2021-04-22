@@ -139,12 +139,12 @@ dmypy.json
 cython_debug/
 
 .ipynb_checkpoints/
-checkpoints/
+/checkpoints/
 graph/
 informer_checkpoints/
 result_csv/
 result_img/
 results/
 data/ETT/
-data/*csv
+data/*.csv
 
