@@ -147,4 +147,5 @@ result_img/
 results/
 data/ETT/
 data/*.csv
+*.png
 
