@@ -149,5 +149,5 @@ results/
 data/ETT/
 data/*.csv
 *.png
-*.ipynb
+Untitled*.ipynb
 
