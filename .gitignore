@@ -150,4 +150,5 @@ data/ETT/
 data/*.csv
 *.png
 Untitled*.ipynb
+*sample.ipynb
 
