@@ -151,4 +151,4 @@ data/*.csv
 *.png
 Untitled*.ipynb
 *sample.ipynb
-
+.vscode/
