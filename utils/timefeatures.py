@@ -130,7 +130,7 @@ def time_features(dates, timeenc=1, freq='h'):
     > * H - [Hour of day, day of week, day of month, day of year]
     > * T - [Minute of hour*, hour of day, day of week, day of month, day of year]
     > * S - [Second of minute, minute of hour, hour of day, day of week, day of month, day of year]
-    
+
     *minute returns a number from 0-3 corresponding to the 15 minute period it falls into.
     '''
     if timeenc==0:
