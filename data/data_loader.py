@@ -204,7 +204,7 @@ class Dataset_Custom(Dataset):
         self.inverse = inverse
         self.timeenc = timeenc
         self.freq = freq
-
+        self.cols = cols
         self.root_path = root_path
         self.data_path = data_path
         self.__read_data__()
