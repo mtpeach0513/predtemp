@@ -63,11 +63,15 @@ class StandardScaler():
         self.std = data.std(0)
 
     def transform(self, data):
-        mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if torch.is_tensor(data) else self.mean
-        std = torch.from_numpy(self.std).type_as(data).to(data.device) if torch.is_tensor(data) else self.std
+        #mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if torch.is_tensor(data) else self.mean
+        mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if isinstance(data, torch.Tensor) else self.mean
+        #std = torch.from_numpy(self.std).type_as(data).to(data.device) if torch.is_tensor(data) else self.std
+        std = torch.from_numpy(self.std).type_as(data).to(data.device) if isinstance(data, torch.Tensor) else self.std
         return (data - mean) / std
 
     def inverse_transform(self, data):
-        mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if torch.is_tensor(data) else self.mean
-        std = torch.from_numpy(self.std).type_as(data).to(data.device) if torch.is_tensor(data) else self.std
+        #mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if torch.is_tensor(data) else self.mean
+        mean = torch.from_numpy(self.mean).type_as(data).to(data.device) if isinstance(data, torch.Tensor) else self.mean
+        #std = torch.from_numpy(self.std).type_as(data).to(data.device) if torch.is_tensor(data) else self.std
+        std = torch.from_numpy(self.std).type_as(data).to(data.device) if isinstance(data, torch.Tensor) else self.std
         return (data * std) + mean
